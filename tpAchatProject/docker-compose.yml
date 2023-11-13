@@ -1,7 +1,7 @@
 version: '3'
 services:
   Achat:
-    image: SAIFEDDINELAYOUNI-5SIM3-G4-tpAchatProject
+    image: saifeddinelayouni-5sim3-g4-tpachatproject
     restart: on-failure
     ports:
       - '8089:8089'
