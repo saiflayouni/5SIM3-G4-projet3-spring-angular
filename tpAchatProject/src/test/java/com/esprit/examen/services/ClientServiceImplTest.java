@@ -1,4 +1,4 @@
-/*package com.esprit.examen.services;
+package com.esprit.examen.services;
 
 import static org.junit.Assert.*;
 
@@ -24,6 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootTest
 @Slf4j
 public class ClientServiceImplTest {
+	/*
 	@Autowired
 	IClientService clientService;
 
@@ -80,6 +81,5 @@ public class ClientServiceImplTest {
 
 		}
 	}
-
-}
 */
+}
