@@ -1,4 +1,4 @@
-/*package com.esprit.examen.services;
+package com.esprit.examen.services;
 
 import static org.junit.Assert.*;
 import java.util.List;
@@ -12,6 +12,7 @@ import com.esprit.examen.entities.Stock;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class StockServiceImplTest {
+	/*
 	@Autowired
 	IStockService stockService;
 	
@@ -47,6 +48,6 @@ public class StockServiceImplTest {
 		stockService.deleteStock(savedStock.getIdStock());
 		assertNull(stockService.retrieveStock(savedStock.getIdStock()));
 	}
+	*/
 
 }
-*/
