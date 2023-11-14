@@ -61,6 +61,4 @@ class ReglementServiceImplTestJUnit {
 
         System.out.println("RetrieveReglementTest : Ok");
     }
-
-    // Similar adjustments for other tests
 }
