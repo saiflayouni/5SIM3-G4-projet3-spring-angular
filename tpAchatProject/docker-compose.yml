@@ -26,6 +26,9 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
 
+networks:
+  mynetwork:
+
 volumes:
   mysql-data:
   .m2:
