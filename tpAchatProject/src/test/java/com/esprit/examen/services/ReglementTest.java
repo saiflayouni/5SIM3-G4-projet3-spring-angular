@@ -11,6 +11,7 @@ import com.esprit.examen.entities.Reglement;
 import com.esprit.examen.repositories.FactureRepository;
 import com.esprit.examen.repositories.ReglementRepository;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,7 +24,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 public class ReglementTest {
-    @InjectMocks
+    @Autowired
     private ReglementServiceImpl reglementService;
 
     @MockBean
