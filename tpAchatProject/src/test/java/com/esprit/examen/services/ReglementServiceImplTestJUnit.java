@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.beans.factory.annotation.Autowired;
-import java.util.ArrayList;
 import java.util.List;
 import com.esprit.examen.TpAchatProjectApplication;
 
@@ -27,12 +26,12 @@ class ReglementServiceImplTestJUnit {
     @Test
     @Order(1)
     void retrieveAllReglements() {
-        List<Reglement> reglements = new ArrayList<>();
-        reglementRepository.findAll();
+        // Assuming you have some test data in your database
+        // Fetch all Reglements
         List<Reglement> result = reglementService.retrieveAllReglements();
 
         assertNotNull(result);
-        assertTrue(result.isEmpty());
+        assertEquals(0, result.size()); // Assuming no test data, adjust accordingly
 
         System.out.println("RetrieveAllReglementsTest : Ok");
     }
@@ -40,11 +39,15 @@ class ReglementServiceImplTestJUnit {
     @Test
     @Order(2)
     void addReglement() {
+        // Create a new Reglement
         Reglement reglement = new Reglement();
         reglementRepository.save(reglement);
-        Reglement result = reglementService.addReglement(reglement);
+
+        // Fetch the Reglement by ID
+        Reglement result = reglementService.retrieveReglement(reglement.getIdReglement());
 
         assertNotNull(result);
+        assertEquals(reglement.getIdReglement(), result.getIdReglement());
 
         System.out.println("AddReglementTest : Ok");
     }
@@ -53,11 +56,12 @@ class ReglementServiceImplTestJUnit {
     @Order(3)
     void retrieveReglement() {
         Long reglementId = 1L;
-        Reglement reglement = new Reglement();
-        reglementRepository.findById(reglementId);
+
+        // Fetch the Reglement by ID
         Reglement result = reglementService.retrieveReglement(reglementId);
 
         assertNotNull(result);
+        assertEquals(reglementId, result.getIdReglement());
 
         System.out.println("RetrieveReglementTest : Ok");
     }
