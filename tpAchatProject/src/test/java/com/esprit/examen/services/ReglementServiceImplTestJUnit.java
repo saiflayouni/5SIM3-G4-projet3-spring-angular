@@ -6,15 +6,18 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.extension.ExtendWith; // Added import
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import com.esprit.examen.TpAchatProjectApplication;
+import org.springframework.test.context.junit.jupiter.SpringExtension; // Added import
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(classes = TpAchatProjectApplication.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@ExtendWith(SpringExtension.class) // Added annotation
 class ReglementServiceImplTestJUnit {
 
     @Autowired
@@ -65,4 +68,3 @@ class ReglementServiceImplTestJUnit {
 
         System.out.println("RetrieveReglementTest : Ok");
     }
-}
