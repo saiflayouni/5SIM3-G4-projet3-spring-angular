@@ -16,8 +16,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension; // Added 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(classes = TpAchatProjectApplication.class)
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-@ExtendWith(SpringExtension.class) // Added annotation
+@ExtendWith(SpringExtension.class) 
 class ReglementServiceImplTestJUnit {
 
     @Autowired
