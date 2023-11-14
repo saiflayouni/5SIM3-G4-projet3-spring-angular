@@ -1,4 +1,4 @@
-package tn.esprit.rh.achat;
+package com.esprit.examen.services;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,10 +8,10 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import tn.esprit.rh.achat.entities.Reglement;
-import tn.esprit.rh.achat.repositories.FactureRepository;
-import tn.esprit.rh.achat.repositories.ReglementRepository;
-import tn.esprit.rh.achat.services.ReglementServiceImpl;
+import com.esprit.examen.entities.Reglement;
+import com.esprit.examen.repositories.FactureRepository;
+import com.esprit.examen.repositories.ReglementRepository;
+import com.esprit.examen.services.ReglementServiceImpl;
 
 
 
