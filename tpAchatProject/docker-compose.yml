@@ -1,6 +1,6 @@
 version: '3'
 services:
-  Achat:
+  achat:
     image: saifeddinelayouni-5sim3-g4-tpachatproject
     restart: on-failure
     ports:
