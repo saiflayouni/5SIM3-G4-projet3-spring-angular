@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest
+@SpringBootTest(classes = TpAchatProjectApplication.class)
 @ExtendWith(MockitoExtension.class)
 public class ReglementTest {
     @Autowired
