@@ -9,7 +9,6 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,12 +16,12 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ReglementServiceImplTestJUnit {
-    @Autowired
-    private final ReglementRepository reglementRepository;
-    @Autowired
-    private final ReglementServiceImpl reglementService;
 
-    
+    @Autowired
+    private ReglementRepository reglementRepository;
+
+    @Autowired
+    private ReglementServiceImpl reglementService;
 
     @Test
     @Order(1)
