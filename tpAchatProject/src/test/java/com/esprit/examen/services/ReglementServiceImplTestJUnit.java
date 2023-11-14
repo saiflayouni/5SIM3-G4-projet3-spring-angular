@@ -68,3 +68,4 @@ class ReglementServiceImplTestJUnit {
 
         System.out.println("RetrieveReglementTest : Ok");
     }
+      }
