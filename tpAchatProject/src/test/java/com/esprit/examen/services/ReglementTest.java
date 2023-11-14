@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.esprit.examen.entities.Reglement;
 import com.esprit.examen.repositories.FactureRepository;
 import com.esprit.examen.repositories.ReglementRepository;
-
+import org.springframework.boot.test.mock.mockito.MockBean;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,10 +26,10 @@ public class ReglementTest {
     @InjectMocks
     private ReglementServiceImpl reglementService;
 
-    @Mock
+    @MockBean
     private FactureRepository factureRepository;
 
-    @Mock
+    @MockBean
     private ReglementRepository reglementRepository;
 
     @BeforeEach
