@@ -10,10 +10,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
+import com.esprit.examen.TpAchatProjectApplication;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+@SpringBootTest(classes = TpAchatProjectApplication.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ReglementServiceImplTestJUnit {
 
