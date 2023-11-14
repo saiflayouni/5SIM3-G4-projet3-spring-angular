@@ -6,12 +6,12 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import org.junit.jupiter.api.extension.ExtendWith; // Added import
+import org.junit.jupiter.api.extension.ExtendWith; 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import com.esprit.examen.TpAchatProjectApplication;
-import org.springframework.test.context.junit.jupiter.SpringExtension; // Added import
+import org.springframework.test.context.junit.jupiter.SpringExtension; 
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,12 +28,10 @@ class ReglementServiceImplTestJUnit {
     @Test
     @Order(1)
     void retrieveAllReglements() {
-        // Assuming you have some test data in your database
-        // Fetch all Reglements
         List<Reglement> result = reglementService.retrieveAllReglements();
 
         assertNotNull(result);
-        assertEquals(0, result.size()); // Assuming no test data, adjust accordingly
+        assertEquals(0, result.size()); 
 
         System.out.println("RetrieveAllReglementsTest : Ok");
     }
@@ -41,11 +39,9 @@ class ReglementServiceImplTestJUnit {
     @Test
     @Order(2)
     void addReglement() {
-        // Create a new Reglement
         Reglement reglement = new Reglement();
         reglementRepository.save(reglement);
 
-        // Fetch the Reglement by ID
         Reglement result = reglementService.retrieveReglement(reglement.getIdReglement());
 
         assertNotNull(result);
@@ -58,8 +54,6 @@ class ReglementServiceImplTestJUnit {
     @Order(3)
     void retrieveReglement() {
         Long reglementId = 1L;
-
-        // Fetch the Reglement by ID
         Reglement result = reglementService.retrieveReglement(reglementId);
 
         assertNotNull(result);
