@@ -11,7 +11,7 @@ services:
       - db:/var/lib/mysql
     restart: unless-stopped
 
-  devops_project:
+  tpachatproject:
     build:
       context: ./
       dockerfile: Dockerfile
