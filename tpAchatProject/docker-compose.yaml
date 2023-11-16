@@ -26,12 +26,6 @@ services:
     volumes:
       - .m2:/root/.m2
     restart: always
-  tpfront:
-    image: aminesaadaoui/tpfront:1.0
-    ports:
-      - "80:80"
-    depends_on:
-      - tpachatproject
 
 volumes:
   db:
