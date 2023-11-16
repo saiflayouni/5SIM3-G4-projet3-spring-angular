@@ -7,4 +7,4 @@ RUN npm install -g npm@latest
 RUN npm cache clean --force
 
 FROM nginx:alpine
-
+COPY --from=node /app/dist/crudtuto-Front /usr/share/nginx/html
