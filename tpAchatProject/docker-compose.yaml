@@ -27,7 +27,12 @@ services:
       - .m2:/root/.m2
     restart: always
 
-
+  tpfront:
+    image: kamelfardiesprit/devops_front:1.0
+    ports:
+      - "80:80"
+    depends_on:
+      - tpachatproject
 volumes:
   db:
   .m2:
