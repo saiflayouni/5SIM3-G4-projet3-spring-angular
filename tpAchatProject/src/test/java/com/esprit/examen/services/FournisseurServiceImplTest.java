@@ -5,8 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.*;
 
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -16,21 +19,21 @@ import com.esprit.examen.entities.Fournisseur;
 import com.esprit.examen.repositories.FournisseurRepository;
 
 @SpringBootTest
-public class FournisseurServiceImplTest {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
+public class FournisseurServiceImplTest {
     @Mock
     private FournisseurRepository fournisseurRepository;
 
-    @InjectMocks // auto injects fournisseurRepository into FournisseurServiceImpl
+    @InjectMocks
     private FournisseurServiceImpl fournisseurService;
 
-    @BeforeEach
-    public void setup() {
-        MockitoAnnotations.openMocks(this);
+    @Before
+    public void init() {
+        MockitoAnnotations.initMocks(this);
     }
-
     @Test
-    public void testRetrieveAllFournisseurs() {
+    public void shouldRetrieveAllFournisseurs() {
         List<Fournisseur> fournisseurs = new ArrayList<>();
         fournisseurs.add(new Fournisseur());
         when(fournisseurRepository.findAll()).thenReturn(fournisseurs);
@@ -43,7 +46,7 @@ public class FournisseurServiceImplTest {
     }
 
     @Test
-    public void testAddFournisseur() {
+    public void shouldAddFournisseur() {
         Fournisseur fournisseur = new Fournisseur();
         when(fournisseurRepository.save(any(Fournisseur.class))).thenReturn(fournisseur);
 
@@ -54,7 +57,7 @@ public class FournisseurServiceImplTest {
     }
 
     @Test
-    public void testDeleteFournisseur() {
+    public void shouldDeleteFournisseur() {
         doNothing().when(fournisseurRepository).deleteById(anyLong());
 
         fournisseurService.deleteFournisseur(1L);
@@ -63,7 +66,7 @@ public class FournisseurServiceImplTest {
     }
 
     @Test
-    public void testRetrieveFournisseur() {
+    public void shouldRetrieveFournisseur() {
         Fournisseur fournisseur = new Fournisseur();
         when(fournisseurRepository.findById(anyLong())).thenReturn(Optional.of(fournisseur));
 
@@ -72,7 +75,5 @@ public class FournisseurServiceImplTest {
         assertNotNull(result);
         verify(fournisseurRepository, times(1)).findById(anyLong());
     }
-
-
 
 }
