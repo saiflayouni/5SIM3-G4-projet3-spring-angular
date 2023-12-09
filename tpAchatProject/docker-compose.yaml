@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tpachato
+    volumes:
+      - db:/var/lib/mysql
+    restart: unless-stopped
+
+  tpachatproject:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8089:8089"
+    depends_on:
+      - mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/tpachato?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    volumes:
+      - .m2:/root/.m2
+    restart: always
+
+volumes:
+  db:
+  .m2:
