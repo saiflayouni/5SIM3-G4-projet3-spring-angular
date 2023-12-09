@@ -231,3 +231,9 @@ M
 crud-tuto-front/karma.conf.js,8\f\8f8af90bfb3d6bc19e7558a60db9eae223aa2e29
 F
 tpAchatProject/pom.xml,2\a\2a94d7e0b1dd6e3928f5476250ab7f4b2a3129f3
+I
+tpAchatProject/Dockerfile,d\6\d6a310371a59b01722ac8d9533e4d7c1cefb6950
+R
+"tpAchatProject/docker-compose.yaml,5\c\5c49e05997845a35d2366531c3f1296ad4f11942
+‡
+WtpAchatProject/src/test/java/com/esprit/examen/services/FournisseurServicelmplTest.java,8\2\8242cbb17fa2891b0e3c665c21a15ec15dce3796
